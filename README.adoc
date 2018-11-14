@@ -1,0 +1,15 @@
+= API Project 
+
+image::data/api.png[API Project,500]
+:toc:
+
+== Writing a good API 
+First of all, API in Italian is plural for BEE, so BEES is API, hence the placeholder image. 
+
+Ok, graphics done, this week project is a learning opportunity for  building a (solid) API. I want to document the process, opinions and and tutorials in here to keep track of progresses (and failures). Plus, I don't have anyone else to share these ideas with so might as well post everything on GitHub. 
+
+REpresentational State Transfer (REST) is a web development architecture design style which refers to logically separating your API resources so as to enable easy access, manipulation and scaling. Reusable components are written in a way so that they can be easily managed via simple and intuitive HTTP requests which can be GET, POST, PUT, PATCH, and DELETE (there can be more, but above are the most commonly used ones).
+
+== Tools
+Options for a web-server API are to implement through django, flask, bottle. My choice is to try flask, as I have been playing with django abd bottle flask seems the weapon of choice of many developers out there, plus this api won't need to support a massive load (at least for now, so flask seems appropriate).
+
