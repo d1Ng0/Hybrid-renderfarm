@@ -1,17 +1,9 @@
-= API Project 
-
-image::data/api.png[API Project,500]
+= An Hybrid Render-farm API 
 :toc:
 
-== Writing a good API 
-First of all, API in Italian is plural for BEE, so BEES is API, hence the placeholder image. 
-
-Ok, graphics done, this week project is a learning opportunity for  building a (solid) API. I want to document the process, opinions and and tutorials in here to keep track of progresses (and failures). Plus, I don't have anyone else to share these ideas with so might as well post everything on GitHub. 
-
-REpresentational State Transfer (REST) is a web development architecture design style which refers to logically separating your API resources so as to enable easy access, manipulation and scaling. Reusable components are written in a way so that they can be easily managed via simple and intuitive HTTP requests which can be GET, POST, PUT, PATCH, and DELETE (there can be more, but above are the most commonly used ones).
-
-== Tools
-Options for a web-server API are to implement through django, flask, bottle. My choice is to try flask, as I have been playing with django abd bottle flask seems the weapon of choice of many developers out there, plus this api won't need to support a massive load (at least for now, so flask seems appropriate).
+[#test]
+.Hybrid renderfarm structure
+image::data/hybrid-farm.svg[API Project,500]
 
 == Motivation
 My motivation to explore an hybrid approach to the traditional in-house renderfarm is to address a common pain-point of any animation or visual-effects studio, providing any failicty with additional machines when in high demand of computational power. With almost 20 years of field-experience I can list numerous occasions during which the local renderfarm, no matter how big, reached full capacity for one of the following reasons: 
@@ -29,6 +21,12 @@ The way I decided to implement this idea is by creating an API layer between the
 The graph below illustrate the idea. 
 NOTE: Also, I really wanted to explore how to create a solid RESTful API, but I needed a goos case, and this seems a perfect fit.
 Subdividing the architecture of this sytem into micro-services would also allow to update a cloud solution or part of the system withouth affecting the UI interface of the artists, which is something I value as Artist. 
+
+=== RESTful API
+REpresentational State Transfer (REST) is a web development architecture design style which refers to logically separating your API resources so as to enable easy access, manipulation and scaling. Reusable components are written in a way so that they can be easily managed via simple and intuitive HTTP requests which can be GET, POST, PUT, PATCH, and DELETE (there can be more, but above are the most commonly used ones).
+=== Tools
+Options for a web-server API are to implement through django, flask, bottle. My choice is to try flask, as I have been playing with django abd bottle flask seems the weapon of choice of many developers out there, plus this api won't need to support a massive load (at least for now, so flask seems appropriate).
+
 
 
 
