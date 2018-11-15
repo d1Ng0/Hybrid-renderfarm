@@ -3,7 +3,7 @@
 
 [#test]
 .Hybrid renderfarm structure
-image::data/hybrid-farm.svg[API Project,500]
+image::data/hybrid-farm.svg[API Project,1000]
 
 == Motivation
 My motivation to explore an hybrid approach to the traditional in-house renderfarm is to address a common pain-point of any animation or visual-effects studio, providing any failicty with additional machines when in high demand of computational power. With almost 20 years of field-experience I can list numerous occasions during which the local renderfarm, no matter how big, reached full capacity for one of the following reasons: 
