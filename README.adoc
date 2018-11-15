@@ -24,7 +24,11 @@ Because of these reasons it feels reasonable to assume a renderfarm that can sca
 == Abstract solution
 There are several solution for rendering on the cloud, moreover, almost every single facility has a local renderfarm. In my opinion the scheduling, balancing and prioritization of the jobs should not be a responsability of the Artist, which should be focused on the 'artistic' aspect of creating beautiful pixels, so I think that the interface one uses to dispatch jobs should be unified and transparent to where the render will be processed. Afterall, if the system is well integrated, no one would care if the renders are processed in house or on a cloud-system.
 This is the main reason why this repository proposed an agnostic abstraction layer to dispatch jobs form a local machine without overloading an Artist with multipule interfaces to launch jobs on local or cloud farms. 
+== Implementation
 The way I decided to implement this idea is by creating an API layer between the DCC software [Maya, Houdini, Nuke, etc.] and a localhost which runs a scheduler and dispatches jobs to either a local render-farm or a remote location (could be a Google, Amazon cloud provider, or even another branch of the same studio which has idle machines).
 The graph below illustrate the idea. 
-Also, I really wanted to explore how to create a solid RESTful API, but I needed a goos case, and this seems a perfect fit.
+NOTE: Also, I really wanted to explore how to create a solid RESTful API, but I needed a goos case, and this seems a perfect fit.
+Subdividing the architecture of this sytem into micro-services would also allow to update a cloud solution or part of the system withouth affecting the UI interface of the artists, which is something I value as Artist. 
+
+
 
