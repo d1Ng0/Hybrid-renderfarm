@@ -30,10 +30,48 @@ Subdividing the architecture of this system into micro-services would also allow
 
 <<<
 
-=== RESTful API
-REpresentational State Transfer (REST) is a web development architecture design style which refers to logically separating your API resources so as to enable easy access, manipulation and scaling. Reusable components are written in a way so that they can be easily managed via simple and intuitive HTTP requests which can be GET, POST, PUT, PATCH, and DELETE (there can be more, but above are the most commonly used ones).
-=== Tools
-Options for a web-server API are to implement through django, flask, bottle. My choice is to try flask, as I have been playing with django abd bottle flask seems the weapon of choice of many developers out there, plus this api won't need to support a massive load (at least for now, so flask seems appropriate).
+== RESTful API
+REpresentational State Transfer (REST) json format:
 
+=== Usage
+All responses will have the form:
+```json
+{
+    "data" : "mixed type holding content of response"
+    "message" : "description of what happened"
+}
+```
+==== Definitions (WIP)
+.Table Title
+|===
+|API Endpoint |Arguments |Description |Result 
 
+|`GET /jobs`
+| None
+| Returns a list of jobs
+| ```[
+    {
+    "jobID" = "00001",
+    "name" = "some-render-job-name"
+    "jobs-status" = "RUNNING"
+    },
+    {
+        ...
+    }
+]
 
+| `DELETE /jobs`
+| Job ID
+| Deletes a job from the current queue
+| Returns the JOB_ID if successful 
+
+|`POST /new_job` 
+|`"name":string` job name
+|Send a new job on the farm
+|Return the JOB_ID, if successful
+|===
+
+=== Tools and libraries
+Options for a web-server API are to implement through django, flask, bottle, or manually. My choice is to try django as seems the most solid and most used framework available. As second step will be interesting to implement this from scratch (no external libraries).
+
+* link:https://swagger.io/tools/swagger-ui/[Swagger.io] seems to be the nicest option for documenting a RESTful api 
