@@ -42,6 +42,10 @@ All responses will have the form:
     "message" : "description of what happened"
 }
 ```
+
+.Usage Example (Work in progress)
+image::data/render-scheduler-wip.gif[Usage example WIP]
+
 ==== Definitions (WIP)
 
 .Table Title
@@ -78,3 +82,4 @@ Options for a web-server API are to implement through django, flask, bottle, or 
 
 * link:https://swagger.io/tools/swagger-ui/[Swagger.io] seems to be the nicest option for documenting a RESTful api 
 * link:https://github.com/django-tastypie/django-tastypie[Tastypie] 
+
