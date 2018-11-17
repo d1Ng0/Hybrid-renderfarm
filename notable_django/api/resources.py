@@ -12,3 +12,4 @@ class JobsResource(ModelResource):
         resource_name = 'jobs'
         authorization = Authorization()
         # fields = ['job_id', 'name'] # to limit the resources
+        always_return_data = True
