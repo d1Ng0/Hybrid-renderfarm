@@ -17,7 +17,9 @@ class Scheduler():
     # check how many free procs there are on local renderfarm
     # check if other (cloud) renderfarm is available
     # submit job (submit class should be abstract, each renderfarm should have an implementation to make it simple to switch between rendering farm options)
-
+    """
+    the scheduler should run on the same machine as the django DB so the table should be accessed through django not REST
+    """
 
 if __name__ == '__main__':
     app = Scheduler()

@@ -13,7 +13,7 @@ class Jobs(models.Model):
     job_id = models.CharField(max_length=30) # should be a UUIDField
     name = models.CharField(max_length=200)
     user = models.CharField(max_length=30) 
-    cmd = models.TextField() 
+    params = models.TextField() 
     timestamp = models.CharField(max_length=200)  # should be a DATETIMEField
     
     def __str__(self):
