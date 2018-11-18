@@ -50,7 +50,6 @@ class Interface():
         for n, job in enumerate(r['objects']):
             print("JOB:{} >>> DATA: {}".format(n, job))
 
-
 if __name__ == '__main__':
     app = Interface()
     app.post_job()
