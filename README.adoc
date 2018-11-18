@@ -83,3 +83,9 @@ Options for a web-server API are to implement through django, flask, bottle, or 
 * link:https://swagger.io/tools/swagger-ui/[Swagger.io] seems to be the nicest option for documenting a RESTful api 
 * link:https://github.com/django-tastypie/django-tastypie[Tastypie] 
 
+=== Further research and optimizations
+As I started developing and researching for optima solution I came across various topics which I decided to collect here for my future me:
+
+* Working with WebSocket. link:https://pusher.com/websockets[What are WebSockets?] +
+WebSockets represent a standard for bi-directional realtime communication between servers and clients. Connection limitations are no longer a problem since WebSockets represent a single TCP socket connection.
+
